@@ -4,6 +4,7 @@ import { HiChat } from 'react-icons/hi';
 import { HiArrowLeftOnRectangle, HiUsers } from 'react-icons/hi2';
 import { signOut } from "next-auth/react";
 import useConversation from "./useConversation";
+import {BsFillChatLeftDotsFill} from "react-icons/bs"
 
 const useRoutes = () => {
   const pathname = usePathname();
@@ -13,7 +14,7 @@ const useRoutes = () => {
     { 
       label: 'Chat', 
       href: '/conversations', 
-      icon: HiChat,
+      icon: BsFillChatLeftDotsFill,
       active: pathname === '/conversations' || !!conversationId
     },
     { 
